@@ -26,5 +26,5 @@ The legacy `/Huntington_SWE_Resume-1.pdf` URL serves the same current document t
 - Focus the title bar and use arrow keys to move; Home or Escape resets position.
 - Minimize, restore, reset, close, and reopen. Focus returns to the reopen control or title bar as appropriate.
 - Resize the viewport after moving the window; its position resets to remain reachable.
-- Hover or keyboard focus shows the amber glow. Reduced-motion preferences are respected.
+- Hover or keyboard focus shows the sage-green glow. Reduced-motion preferences are respected.
 - Verify at 320px, 768px, 1024px, and 1440px widths, and check all project filters.

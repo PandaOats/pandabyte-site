@@ -192,7 +192,7 @@
 .footer {
   padding: 1.5rem 0 2.5rem;
   border-top: 1px solid var(--hairline);
-  background: rgba(14, 9, 5, 0.72);
+  background: var(--accent-soft);
   position: relative;
   z-index: 1;
 }
@@ -244,7 +244,7 @@
 .textLink { color: var(--accent); font-size: 14px; width: fit-content; }
 .textLink:hover { text-decoration: underline; }
 .contactPanel { border-radius: 12px; }
-.awsPanel { margin-top: 2.5rem; padding: clamp(1.5rem, 4vw, 3rem); background: var(--cocoa); border: 1px solid var(--hairline); border-radius: 12px; }
+.awsPanel { margin-top: 2.5rem; padding: clamp(1.5rem, 4vw, 3rem); background: var(--accent-soft); border: 1px solid var(--hairline); border-radius: 12px; }
 .awsHeading { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .awsHeading h3 { font-size: 1.5rem; }
 .awsWordmark { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.08em; line-height: 1; margin-bottom: 1.5rem; }

@@ -23,8 +23,8 @@
   padding: 0.65rem 1.25rem;
   border-radius: 6px;
   border: 1px solid var(--accent);
-  background: var(--accent);
-  color: var(--cocoa-deep);
+  background: var(--accent-fill);
+  color: var(--on-accent);
   font-family: var(--font-mono);
   font-size: var(--meta-size);
   font-weight: 700;

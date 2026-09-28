@@ -36,7 +36,7 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: #6dd2a4;
+  background: var(--accent);
   flex-shrink: 0;
 
 }
@@ -118,8 +118,8 @@
 }
 
 .primaryAction {
-  background: var(--accent);
-  color: var(--cocoa-deep);
+  background: var(--accent-fill);
+  color: var(--on-accent);
 }
 
 .primaryAction:hover {

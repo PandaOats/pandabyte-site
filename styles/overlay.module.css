@@ -209,10 +209,10 @@
 .projectTitle { color: var(--ink-1); }
 .projectSummary { color: var(--ink-2); max-width: 75ch; }
 .chip { color: var(--ink-2); background: transparent; border-color: var(--hairline); border-radius: 4px; font-size: 11px; }
-.live { color: #a0d9b5; background: #23362a; }
+.live { color: var(--on-accent); background: var(--accent-fill); }
 .comingSoon { color: var(--ink-2); background: var(--surface-strong); }
 .statusBadge { font-size: 10px; }
-.projectLink { background: var(--accent); color: var(--cocoa-deep); border-radius: 5px; }
+.projectLink { background: var(--accent-fill); color: var(--on-accent); border-radius: 5px; }
 .secondaryLink { background: transparent; color: var(--ink-2); border: 0; font-size: 12px; }
 .secondaryLink:hover { color: var(--accent); }
 .projectIndex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--ink-3); font: 10px var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }

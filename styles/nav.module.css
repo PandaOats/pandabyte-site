@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--hairline);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(20, 18, 15, 0.92);
+  background: rgba(244, 241, 231, 0.94);
 }
 
 .nav {
@@ -27,8 +27,8 @@
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
-  color: var(--cocoa-deep);
-  background: var(--accent);
+  color: var(--on-accent);
+  background: var(--accent-fill);
   letter-spacing: 0;
   flex-shrink: 0;
 }
@@ -70,8 +70,8 @@
 }
 
 .resumeLink {
-  background: var(--accent);
-  color: var(--cocoa-deep);
+  background: var(--accent-fill);
+  color: var(--on-accent);
   font-weight: 600;
 }
 

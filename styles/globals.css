@@ -1,20 +1,27 @@
 :root {
-  --cocoa: #201c18;
-  --cocoa-deep: #14120f;
-  --bone: #f5ecdb;
-  --amber: #e89a3a;
-  --rust: #c5532a;
-  --moss: #6b8e4e;
-  --accent: var(--amber);
+  --page-bg: #f4f1e7;
+  --panel-bg: #fbfaf4;
+  --accent: #426449;
+  --accent-fill: #bfd3ac;
+  --on-accent: #263c2b;
+  --accent-soft: #e8edde;
+  --accent-rgb: 66 100 73;
+  --surface: #faf8f0;
+  --surface-strong: #e8edde;
+  --hairline: #d6d8cb;
+  --hairline-strong: #9fa994;
+  --ink-1: #29332a;
+  --ink-2: #505a4e;
+  --ink-3: #626d5e;
+  --ink-4: #9ca590;
 
-  --surface: rgba(245, 236, 219, 0.04);
-  --surface-strong: rgba(245, 236, 219, 0.09);
-  --hairline: rgba(245, 236, 219, 0.14);
-  --hairline-strong: rgba(245, 236, 219, 0.32);
-  --ink-1: var(--bone);
-  --ink-2: rgba(245, 236, 219, 0.76);
-  --ink-3: rgba(245, 236, 219, 0.65);
-  --ink-4: rgba(245, 236, 219, 0.34);
+  /* Legacy project-page tokens. */
+  --cocoa: #29332a;
+  --cocoa-deep: #263c2b;
+  --bone: #fbfaf4;
+  --amber: var(--accent);
+  --rust: #a34434;
+  --moss: #426449;
 
   --step-0: 1rem;
   --step-1: 1.25rem;
@@ -36,14 +43,14 @@
   --radius-md: 0px;
   --radius-sm: 0px;
 
-  /* RGB-format shims so existing project/overlay CSS still resolves */
-  --mint-cream-rgb: 245 236 219;   /* maps to bone */
-  --bone-rgb: 245 236 219;
-  --amber-rgb: 232 154 58;
-  --prussian-blue-rgb: 14 9 5;     /* maps to cocoa-deep */
-  --oxford-navy-rgb: 26 18 11;     /* maps to cocoa */
-  --regal-navy-rgb: 26 18 11;
-  --powder-blue-rgb: 232 154 58;   /* maps to amber */
+  /* Shared with the existing project pages and overlays. */
+  --mint-cream-rgb: 251 250 244;
+  --bone-rgb: 251 250 244;
+  --amber-rgb: 66 100 73;
+  --prussian-blue-rgb: 38 60 43;
+  --oxford-navy-rgb: 41 51 42;
+  --regal-navy-rgb: 41 51 42;
+  --powder-blue-rgb: 191 211 172;
 }
 
 html {
@@ -61,7 +68,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink-1);
-  background: var(--cocoa-deep);
+  background: var(--page-bg);
   font-family: var(--font-body);
   line-height: var(--line-height-body);
   background-attachment: fixed;
@@ -130,8 +137,8 @@ img {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--cocoa-deep);
+  background: var(--accent-fill);
+  color: var(--on-accent);
 }
 
 .container {
