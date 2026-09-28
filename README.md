@@ -28,3 +28,7 @@ The legacy `/Huntington_SWE_Resume-1.pdf` URL serves the same current document t
 - Resize the viewport after moving the window; its position resets to remain reachable.
 - Hover or keyboard focus shows the sage-green glow. Reduced-motion preferences are respected.
 - Verify at 320px, 768px, 1024px, and 1440px widths, and check all project filters.
+
+## Theme switch
+
+The header switch toggles beige/sage light mode and forest/sage dark mode. Light is the default. The choice is saved under `pandabyte-theme` in localStorage and applied before first paint. Storage failures fall back to a working in-page switch. Verify Space/Enter toggling, both states after reload, and the 320px mobile header.

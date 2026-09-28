@@ -1,8 +1,8 @@
 .desktop { min-width: 0; }
 .stage { height: 460px; position: relative; display: flex; align-items: center; justify-content: center; }
 .watermark { position: absolute; color: var(--ink-3); font-size: 13px; bottom: 50%; }
-.window { position: relative; width: calc(100% - 3rem); max-width: 400px; border: 1px solid var(--hairline-strong); border-radius: 12px; background: var(--panel-bg); box-shadow: 0 16px 40px #29332a12; transition: box-shadow 220ms, border-color 220ms; overflow: hidden; }
-.window:hover, .window:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px #42644922, 0 0 48px #91b47c40, 0 16px 40px #29332a12; }
+.window { position: relative; width: calc(100% - 3rem); max-width: 400px; border: 1px solid var(--hairline-strong); border-radius: 12px; background: var(--panel-bg); box-shadow: 0 16px 40px var(--window-shadow); transition: box-shadow 220ms, border-color 220ms; overflow: hidden; }
+.window:hover, .window:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px #42644922, 0 0 48px #91b47c40, 0 16px 40px var(--window-shadow); }
 .small { max-width: 260px; }
 .bar { display: flex; align-items: center; border-bottom: 1px solid var(--hairline); padding: 4px 8px; }
 .controls { display: flex; gap: 2px; }
@@ -15,7 +15,7 @@
 .controls svg { display: block; position: relative; z-index: 1; }
 .handle { flex: 1; min-width: 0; display: flex; justify-content: space-between; align-items: center; background: transparent; border: 0; color: var(--ink-2); padding: 8px 6px 8px 14px; font: 12px var(--font-mono); cursor: grab; touch-action: none; user-select: none; }
 .dragging .handle { cursor: grabbing; }
-.body { position: relative; aspect-ratio: 1.25; background-image: radial-gradient(#42644920 0.75px, transparent 0.75px); background-size: 18px 18px; }
+.body { position: relative; aspect-ratio: 1.25; background-image: radial-gradient(var(--window-dots) 0.75px, transparent 0.75px); background-size: 18px 18px; }
 .path { position: absolute; top: 16px; left: 0; right: 0; text-align: center; font: 10px var(--font-mono); color: var(--ink-3); }
 .panda { object-fit: contain; padding: 2.5rem 1.75rem 1rem; user-select: none; transition: filter 220ms; }
 .window:hover .panda { filter: drop-shadow(0 0 12px #91b47c55); }
