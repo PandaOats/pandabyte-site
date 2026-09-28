@@ -1,6 +1,5 @@
 .desktop { min-width: 0; }
 .stage { height: 460px; position: relative; display: flex; align-items: center; justify-content: center; }
-.watermark { position: absolute; color: var(--ink-3); font-size: 13px; bottom: 50%; }
 .window { position: relative; width: calc(100% - 3rem); max-width: 400px; border: 1px solid var(--hairline-strong); border-radius: 12px; background: var(--panel-bg); box-shadow: 0 16px 40px var(--window-shadow); transition: box-shadow 220ms, border-color 220ms; overflow: hidden; }
 .window:hover, .window:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px #42644922, 0 0 48px #91b47c40, 0 16px 40px var(--window-shadow); }
 .small { max-width: 260px; }
