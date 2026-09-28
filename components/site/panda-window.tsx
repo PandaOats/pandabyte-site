@@ -83,7 +83,6 @@ export function PandaWindow() {
   return (
     <div className={styles.desktop}>
       <div className={styles.stage} ref={stage}>
-        <span className={styles.watermark} aria-hidden="true">a little space to play.</span>
         {closed ? (
           <button ref={reopen} className={styles.reopen} onClick={() => {
             setPosition({ x: 0, y: 0 });
