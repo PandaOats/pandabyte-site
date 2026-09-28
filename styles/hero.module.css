@@ -1,9 +1,9 @@
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 3.5rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 2rem;
   align-items: center;
-  padding: 5.5rem 0 4rem;
+  padding: 3rem 0 4rem;
 }
 
 @media (max-width: 900px) {
@@ -25,7 +25,7 @@
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.06em;
   color: var(--ink-2);
   width: fit-content;
@@ -38,7 +38,7 @@
   border-radius: 999px;
   background: #6dd2a4;
   flex-shrink: 0;
-  animation: pulse 1800ms infinite;
+
 }
 
 @keyframes pulse {
@@ -62,12 +62,12 @@
 .title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(2.6rem, 7.5vw, 5.4rem);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--ink-1);
   margin: 0 0 1.1rem;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .accent {
@@ -91,7 +91,7 @@
   gap: 6px 16px;
   font-family: var(--font-mono);
   font-size: 11px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.06em;
   color: var(--ink-3);
   margin-bottom: 2rem;
@@ -118,12 +118,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border-radius: 6px;
   padding: 0.7rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.06em;
   border: 1px solid transparent;
   transition: transform 140ms, opacity 140ms;
@@ -158,71 +158,5 @@
   color: var(--ink-1);
 }
 
-/* ---- Terminal card (right column) ---- */
-.visualWrap {
-  display: flex;
-  align-items: stretch;
-}
 
-.terminalCard {
-  width: 100%;
-  border: 1px solid var(--hairline-strong);
-  background: var(--surface);
-  font-family: var(--font-mono);
-  display: flex;
-  flex-direction: column;
-}
-
-.terminalBar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--hairline);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-3);
-  justify-content: space-between;
-  flex-shrink: 0;
-}
-
-.terminalDots {
-  display: flex;
-  gap: 6px;
-  flex-shrink: 0;
-}
-
-.terminalDots span {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: var(--hairline-strong);
-  display: block;
-}
-
-.terminalBody {
-  position: relative;
-  aspect-ratio: 5 / 4;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(245, 236, 219, 0.04) 0 1px, transparent 1px 14px),
-    repeating-linear-gradient(90deg, rgba(245, 236, 219, 0.04) 0 1px, transparent 1px 14px);
-  overflow: hidden;
-}
-
-.terminalFoot {
-  border-top: 1px solid var(--hairline);
-  padding: 10px 14px;
-  font-size: 11px;
-  color: var(--ink-3);
-  display: flex;
-  justify-content: space-between;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-
-.terminalFoot strong {
-  color: var(--accent);
-  font-weight: 600;
-}
+.intro { display: block; font-size: 0.5em; font-weight: 400; color: var(--ink-2); margin-bottom: 0.5em; letter-spacing: -0.035em; }
