@@ -1,21 +1,22 @@
 .desktop { min-width: 0; }
 .stage { height: 460px; position: relative; display: flex; align-items: center; justify-content: center; }
-.watermark { position: absolute; color: var(--ink-3); font-size: 13px; bottom: 2rem; }
+.watermark { position: absolute; color: var(--ink-3); font-size: 13px; bottom: 50%; }
 .window { position: relative; width: calc(100% - 3rem); max-width: 400px; border: 1px solid var(--hairline-strong); border-radius: 12px; background: var(--cocoa); box-shadow: 0 18px 50px #0004; transition: box-shadow 220ms, border-color 220ms; overflow: hidden; }
 .window:hover, .window:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px #e89a3a22, 0 0 48px #e89a3a26, 0 18px 50px #0004; }
 .small { max-width: 260px; }
 .bar { display: flex; align-items: center; border-bottom: 1px solid var(--hairline); padding: 4px 8px; }
 .controls { display: flex; gap: 2px; }
-.controls button { border: 0; background: transparent; width: 28px; height: 36px; padding: 0; cursor: pointer; font-size: 18px; font-weight: 600; position: relative; isolation: isolate; color: #211a14; }
-.controls button::before { content: ""; position: absolute; inset: 10px 6px; border-radius: 50%; z-index: -1; }
+.controls button { border: 0; background: transparent; width: 28px; height: 36px; padding: 0; cursor: pointer; display: grid; place-items: center; line-height: 1; position: relative; isolation: isolate; color: #211a14; }
+.controls button::before { content: ""; position: absolute; inset: 9px 5px; border-radius: 50%; z-index: -1; }
 .close::before { background: #ee887b; }
 .minimize::before { background: #e9bb68; }
 .reset::before { background: #8ab69c; }
 .controls button:hover::before { inset: 8px 4px; }
+.controls svg { display: block; position: relative; z-index: 1; }
 .handle { flex: 1; min-width: 0; display: flex; justify-content: space-between; align-items: center; background: transparent; border: 0; color: var(--ink-2); padding: 8px 6px 8px 14px; font: 12px var(--font-mono); cursor: grab; touch-action: none; user-select: none; }
 .dragging .handle { cursor: grabbing; }
-.body { position: relative; aspect-ratio: 1.25; background: radial-gradient(ellipse at center, #e89a3a0c, transparent 70%); }
-.path { position: absolute; top: 16px; left: 0; right: 0; text-align: center; font: 9px var(--font-mono); color: var(--ink-3); }
+.body { position: relative; aspect-ratio: 1.25; background-image: radial-gradient(#f5ecdb12 0.75px, transparent 0.75px); background-size: 18px 18px; }
+.path { position: absolute; top: 16px; left: 0; right: 0; text-align: center; font: 10px var(--font-mono); color: var(--ink-3); }
 .panda { object-fit: contain; padding: 2.5rem 1.75rem 1rem; user-select: none; transition: filter 220ms; }
 .window:hover .panda { filter: drop-shadow(0 0 12px #e89a3a38); }
 .foot { display: flex; justify-content: space-between; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--hairline); color: var(--ink-3); font: 9px var(--font-mono); }

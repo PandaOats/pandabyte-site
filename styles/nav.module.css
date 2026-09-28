@@ -20,10 +20,10 @@
 .brand {
   display: inline-grid;
   place-items: center;
-  width: auto;
-  padding: 0 0.75rem;
+  width: 2rem;
+  padding: 0;
   height: 2rem;
-  border-radius: 6px;
+  border-radius: 0;
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
@@ -81,14 +81,14 @@
 
 @media (max-width: 640px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     gap: 0.5rem;
     padding-bottom: 0.8rem;
   }
 
   .links {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 }
 

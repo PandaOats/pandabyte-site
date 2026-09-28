@@ -20,7 +20,7 @@ export function TopNav() {
       <div className="container">
         <nav className={styles.nav} aria-label="Primary">
           <a href={`#${SECTION_IDS.home}`} className={styles.brand} aria-label="PandaByte home">
-            pandabyte<span aria-hidden="true">.</span>
+            P
           </a>
           <ul className={styles.links}>
             {NAV_ITEMS.map((item) => {

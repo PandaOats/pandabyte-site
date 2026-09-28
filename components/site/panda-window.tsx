@@ -6,6 +6,18 @@ import styles from "@/styles/panda-window.module.css";
 
 type Position = { x: number; y: number };
 
+function WindowIcon({ action }: { action: "close" | "minimize" | "restore" | "reset" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor"
+      strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      {action === "close" && <path d="m6 6 12 12M6 18 18 6" />}
+      {action === "minimize" && <path d="M5 12h14" />}
+      {action === "restore" && <path d="M5 12h14M12 5v14" />}
+      {action === "reset" && <><path d="M3 10a9 9 0 1 1 2.5 8.5" /><path d="M3 4v6h6" /></>}
+    </svg>
+  );
+}
+
 export function PandaWindow() {
   const [closed, setClosed] = useState(false);
   const [minimized, setMinimized] = useState(false);
@@ -89,13 +101,13 @@ export function PandaWindow() {
                 <button className={styles.close} aria-label="Close panda window" title="Close panda window" onClick={() => {
                   hasInteracted.current = true;
                   setClosed(true);
-                }}>×</button>
+                }}><WindowIcon action="close" /></button>
                 <button className={styles.minimize} aria-label={minimized ? "Restore panda window" : "Minimize panda window"}
-                  title={minimized ? "Restore" : "Minimize"} onClick={toggleSize}>{minimized ? "+" : "−"}</button>
+                  title={minimized ? "Restore" : "Minimize"} onClick={toggleSize}><WindowIcon action={minimized ? "restore" : "minimize"} /></button>
                 <button className={styles.reset} aria-label="Reset panda window" title="Reset position and size" onClick={() => {
                   setMinimized(false);
                   setPosition({ x: 0, y: 0 });
-                }}>↺</button>
+                }}><WindowIcon action="reset" /></button>
               </div>
               <button ref={handle} className={styles.handle} aria-label="Move panda window" aria-describedby="panda-help"
                 onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag}

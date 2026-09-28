@@ -4,7 +4,7 @@
 }
 
 .section {
-  padding: clamp(3.5rem, 8vw, 7rem) 0;
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
   animation: sectionReveal 0.45s ease both;
 }
 
@@ -236,7 +236,7 @@
   }
 }
 
-.section:first-child { padding-top: 1.5rem; }
+.section:first-child { padding: 1.5rem 0 2.5rem; }
 .section + .section { border-top: 1px solid var(--hairline); }
 .eyebrow { border: 0; background: none; padding: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
 .experienceLabel { font: 11px var(--font-mono); color: var(--ink-3); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -259,3 +259,14 @@
 .awsDetails li + li { margin-top: 0.75rem; }
 .awsStack { font: 11px/1.8 var(--font-mono); color: var(--ink-3); margin-top: 1.5rem; }
 @media (max-width: 480px) { .awsMetrics { grid-template-columns: 1fr; gap: 1.25rem; } }
+/* Keep the AWS story and its outcomes visible together on larger screens. */
+@media (min-width: 900px) {
+  .awsPanel { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); column-gap: 3rem; }
+  .awsHeading { grid-column: 1 / -1; }
+  .awsSummary { grid-column: 1; margin-top: 1.5rem; }
+  .awsDetails { grid-column: 1; margin-block: 1rem 0; font-size: 14px; }
+  .awsMetrics { grid-column: 2; grid-row: 2 / 4; margin: 1.5rem 0 0; border: 0; border-left: 1px solid var(--hairline); padding: 0 0 0 2rem; grid-template-columns: 1fr; gap: 1.25rem; }
+  .awsMetrics div { display: grid; grid-template-columns: 7rem 1fr; align-items: center; gap: 1rem; }
+  .awsMetrics strong { font-size: 2.5rem; }
+  .awsStack { grid-column: 1 / -1; border-top: 1px solid var(--hairline); padding-top: 1.5rem; }
+}

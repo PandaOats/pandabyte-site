@@ -21,8 +21,8 @@ export function ProjectCarousel() {
         {categories.map(item => <button key={item.id} type="button" aria-pressed={category === item.id}
           className={styles.filter} onClick={() => setCategory(item.id)}>{item.label}</button>)}
       </div>
-      <p className={styles.count} role="status">{projects.length} projects</p>
-      <ProjectList projects={projects} />
+      <p className={styles.count} role="status">{projects.length} {projects.length === 1 ? "project" : "projects"}</p>
+      <ProjectList projects={projects} portfolio />
     </div>
   );
 }
