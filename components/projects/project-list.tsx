@@ -27,7 +27,7 @@ export function ProjectList({ projects, onProjectSelect }: ProjectListProps) {
       {projects.map((project) => (
         <article key={project.slug} className={styles.projectItem}>
           <header className={styles.projectHeader}>
-            <h4 className={styles.projectTitle}>{project.title}</h4>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
             <span
               className={`${styles.statusBadge} ${
                 project.status === "live" ? styles.live : styles.comingSoon

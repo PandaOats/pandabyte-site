@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--hairline);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(14, 9, 5, 0.72);
+  background: rgba(20, 18, 15, 0.92);
 }
 
 .nav {
@@ -20,9 +20,10 @@
 .brand {
   display: inline-grid;
   place-items: center;
-  width: 2rem;
+  width: auto;
+  padding: 0 0.75rem;
   height: 2rem;
-  border-radius: 0;
+  border-radius: 6px;
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
@@ -48,12 +49,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border-radius: 6px;
   padding: 0.5rem 0.85rem;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.06em;
   transition: color 160ms, background 160ms;
 }
@@ -90,3 +91,5 @@
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 640px) { .link, .resumeLink { padding: 0.5rem 0.65rem; font-size: 11px; } }

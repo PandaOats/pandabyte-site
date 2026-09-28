@@ -74,7 +74,7 @@ const jsonLd = {
         alternateName: "UCLA",
       },
       sameAs: [
-        "https://github.com/HuntingtonPanda",
+        "https://github.com/PandaOats",
         "https://www.linkedin.com/in/huntington-co/",
       ],
     },

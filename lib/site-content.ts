@@ -51,6 +51,7 @@ export interface ContactItem {
 export const SECTION_IDS = {
   home: "home",
   about: "about",
+  experience: "experience",
   projects: "projects",
   contact: "contact",
 } as const;
@@ -76,7 +77,7 @@ export const SITE_META = {
   ],
 } as const;
 
-export const RESUME_PATH = "/Huntington_SWE_Resume-1.pdf";
+export const RESUME_PATH = "/Huntington_SWE_Resume.pdf";
 
 export const PROJECTS: ProjectItem[] = [
   {
@@ -131,7 +132,7 @@ export const PROJECTS: ProjectItem[] = [
       "Computer vision safety classification pipeline for moderation workflows and model evaluation.",
     status: "coming-soon",
     category: "desktop",
-    tech: ["Python", "OpenCV", "FastAPI", "PostgreSQL"],
+    tech: ["Python", "OpenCV", "Node.js", "Next.js", "MongoDB"],
     links: {
       route: "/projects/asset-scanner",
       repoUrl: "https://github.com/HuntingtonPanda/Asset_scanner",
@@ -165,8 +166,8 @@ export const PROJECTS: ProjectItem[] = [
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: `#${SECTION_IDS.home}` },
   { label: "About", href: `#${SECTION_IDS.about}` },
+  { label: "Experience", href: `#${SECTION_IDS.experience}` },
   { label: "Projects", href: `#${SECTION_IDS.projects}` },
   { label: "Contact", href: `#${SECTION_IDS.contact}` },
   { label: "Resume", href: RESUME_PATH, external: true },
@@ -176,7 +177,7 @@ export const CONTACT_ITEMS: ContactItem[] = [
   {
     id: "github",
     label: "GitHub",
-    href: "https://github.com/HuntingtonPanda",
+    href: "https://github.com/PandaOats",
     external: true,
   },
   {

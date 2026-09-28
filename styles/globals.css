@@ -1,6 +1,6 @@
 :root {
-  --cocoa: #1a120b;
-  --cocoa-deep: #0e0905;
+  --cocoa: #201c18;
+  --cocoa-deep: #14120f;
   --bone: #f5ecdb;
   --amber: #e89a3a;
   --rust: #c5532a;
@@ -13,7 +13,7 @@
   --hairline-strong: rgba(245, 236, 219, 0.32);
   --ink-1: var(--bone);
   --ink-2: rgba(245, 236, 219, 0.76);
-  --ink-3: rgba(245, 236, 219, 0.55);
+  --ink-3: rgba(245, 236, 219, 0.65);
   --ink-4: rgba(245, 236, 219, 0.34);
 
   --step-0: 1rem;
@@ -28,9 +28,9 @@
   --meta-size: 0.8125rem;
   --meta-letter-spacing: 0.06em;
 
-  --font-heading: var(--font-space-grotesk), "Space Grotesk", "Helvetica Neue", sans-serif;
-  --font-body: var(--font-space-grotesk), "Space Grotesk", "Helvetica Neue", sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+  --font-heading: var(--font-space-grotesk, "Helvetica Neue"), sans-serif;
+  --font-body: var(--font-space-grotesk, "Helvetica Neue"), sans-serif;
+  --font-mono: var(--font-jetbrains-mono, ui-monospace), monospace;
 
   --radius-lg: 0px;
   --radius-md: 0px;
@@ -61,27 +61,13 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink-1);
-  background:
-    radial-gradient(60% 40% at 18% 0%, rgba(232, 154, 58, 0.18), transparent 60%),
-    radial-gradient(40% 40% at 100% 30%, rgba(197, 83, 42, 0.12), transparent 60%),
-    var(--cocoa-deep);
+  background: var(--cocoa-deep);
   font-family: var(--font-body);
   line-height: var(--line-height-body);
   background-attachment: fixed;
   position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(245, 236, 219, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 236, 219, 0.025) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-  z-index: 0;
-}
 
 h1,
 h2,
@@ -93,7 +79,7 @@ h6 {
   font-family: var(--font-heading);
   line-height: var(--line-height-heading);
   letter-spacing: -0.04em;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--ink-1);
 }
 
@@ -193,3 +179,7 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+section[id] { scroll-margin-top: 6rem; }
+button { font: inherit; }
+@media (max-width: 640px) { section[id] { scroll-margin-top: 10rem; } }

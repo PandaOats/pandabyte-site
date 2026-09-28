@@ -204,3 +204,14 @@
     transform: translateY(0) scale(1);
   }
 }
+/* Project rows use the same quiet surfaces as the portfolio. */
+.projectItem { background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px; padding: 1.5rem; }
+.projectTitle { color: var(--ink-1); }
+.projectSummary { color: var(--ink-2); max-width: 75ch; }
+.chip { color: var(--ink-2); background: transparent; border-color: var(--hairline); border-radius: 4px; font-size: 11px; }
+.live { color: #a0d9b5; background: #23362a; }
+.comingSoon { color: var(--ink-2); background: var(--surface-strong); }
+.statusBadge { font-size: 10px; }
+.projectLink { background: var(--accent); color: var(--cocoa-deep); border-radius: 5px; }
+.secondaryLink { background: transparent; color: var(--ink-2); border: 0; font-size: 12px; }
+.secondaryLink:hover { color: var(--accent); }
