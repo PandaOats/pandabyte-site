@@ -204,3 +204,28 @@
     transform: translateY(0) scale(1);
   }
 }
+/* Project rows use the same quiet surfaces as the portfolio. */
+.projectItem { background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px; padding: 1.5rem; }
+.projectTitle { color: var(--ink-1); }
+.projectSummary { color: var(--ink-2); max-width: 75ch; }
+.chip { color: var(--ink-2); background: transparent; border-color: var(--hairline); border-radius: 4px; font-size: 11px; }
+.live { color: var(--on-accent); background: var(--accent-fill); }
+.comingSoon { color: var(--ink-2); background: var(--surface-strong); }
+.statusBadge { font-size: 10px; }
+.projectLink { background: var(--accent-fill); color: var(--on-accent); border-radius: 5px; }
+.secondaryLink { background: transparent; color: var(--ink-2); border: 0; font-size: 12px; }
+.secondaryLink:hover { color: var(--accent); }
+.projectIndex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--ink-3); font: 10px var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+.projectIndex span { color: var(--accent); }
+.portfolioGrid { gap: 1rem; }
+.portfolioGrid .projectItem { display: flex; flex-direction: column; padding: 1.75rem; transition: border-color 180ms, background 180ms; }
+.portfolioGrid .projectItem:hover { border-color: var(--hairline-strong); background: var(--surface-strong); }
+.portfolioGrid .projectTitle { font-size: 1.5rem; letter-spacing: -0.04em; }
+.portfolioGrid .projectSummary { font-size: 14px; margin-block: 0.75rem 1.25rem; }
+.portfolioGrid .chipRow { margin-top: auto; }
+.portfolioGrid .actionRow { padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--hairline); }
+@media (min-width: 1000px) {
+  .portfolioGrid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .portfolioGrid .projectItem { grid-column: span 2; }
+  .portfolioGrid .projectItem:nth-child(-n+2) { grid-column: span 3; }
+}

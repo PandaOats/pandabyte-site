@@ -1,3 +1,4 @@
+import { ThemeToggle } from "./theme-toggle";
 import { NAV_ITEMS, SECTION_IDS } from "@/lib/site-content";
 import styles from "@/styles/nav.module.css";
 
@@ -41,6 +42,7 @@ export function TopNav() {
                 </li>
               );
             })}
+            <li><ThemeToggle /></li>
           </ul>
         </nav>
       </div>

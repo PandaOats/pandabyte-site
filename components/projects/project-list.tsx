@@ -7,13 +7,14 @@ import { ProjectChip } from "./project-chip";
 interface ProjectListProps {
   projects: ProjectItem[];
   onProjectSelect?: () => void;
+  portfolio?: boolean;
 }
 
 function isExternalUrl(url: string) {
   return url.startsWith("http://") || url.startsWith("https://");
 }
 
-export function ProjectList({ projects, onProjectSelect }: ProjectListProps) {
+export function ProjectList({ projects, onProjectSelect, portfolio = false }: ProjectListProps) {
   if (projects.length === 0) {
     return (
       <p className={styles.emptyState}>
@@ -23,11 +24,12 @@ export function ProjectList({ projects, onProjectSelect }: ProjectListProps) {
   }
 
   return (
-    <div className={styles.projectList}>
-      {projects.map((project) => (
+    <div className={`${styles.projectList} ${portfolio ? styles.portfolioGrid : ""}`}>
+      {projects.map((project, index) => (
         <article key={project.slug} className={styles.projectItem}>
+          {portfolio && <p className={styles.projectIndex}><span>{String(index + 1).padStart(2, "0")}</span>{project.category === "phone" ? "Mobile app" : project.category === "other" ? "Robotics" : "Web & software"}</p>}
           <header className={styles.projectHeader}>
-            <h4 className={styles.projectTitle}>{project.title}</h4>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
             <span
               className={`${styles.statusBadge} ${
                 project.status === "live" ? styles.live : styles.comingSoon
