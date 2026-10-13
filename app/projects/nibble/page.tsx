@@ -17,21 +17,21 @@ const FEATURES = [
   },
   {
     n: "02",
-    title: "Local-first reads",
-    body: "Browsing is instant and resilient. The app keeps working between dining halls when the network doesn't.",
+    title: "Menus in one place",
+    body: "Browse dining halls and food trucks by meal period, then open a dish for ingredients, nutrition, and dietary labels.",
   },
   {
     n: "03",
-    title: "Privacy-aware accounts",
-    body: "Authentication routes are scoped to what the app actually needs. Account deletion is a first-class flow, not a buried link.",
+    title: "Favorites and alerts",
+    body: "Save favorite dishes and choose which notification categories are enabled.",
   },
 ];
 
 const SPECS = [
-  { k: "Halls", v: "All 4" },
-  { k: "Filters", v: "7 diets" },
-  { k: "Cold start", v: "< 1.2s" },
-  { k: "Offline reads", v: "Yes" },
+  { k: "Platforms", v: "iPhone · iPad" },
+  { k: "Menus", v: "Halls + trucks" },
+  { k: "Planning", v: "Groups + votes" },
+  { k: "Social", v: "Friends + chat" },
 ];
 
 function PhoneMock() {
@@ -172,7 +172,9 @@ export default function NibblePage() {
               </Link>
               <span className={styles.nibbleMark}>
                 <span className={styles.swatch} />
-                Nibble · UCLA dining, simplified
+                <span className={styles.nibbleMarkLabel}>
+                  Nibble · UCLA dining, simplified
+                </span>
               </span>
               <h1 className={styles.heroTitle}>
                 Eat what fits
@@ -183,12 +185,12 @@ export default function NibblePage() {
               <p className={styles.heroDesc}>
                 Nibble is a Bruin dining companion that filters every dining
                 hall menu by what you actually eat — vegan, halal,
-                gluten&#8209;free, allergy&#8209;aware — in one tap. Built
-                local&#8209;first so it keeps working between halls.
+                gluten&#8209;free, allergy&#8209;aware — in one tap. Save
+                favorites and coordinate meals with friends.
               </p>
               <div className={styles.heroActions}>
                 <a
-                  href="https://apps.apple.com"
+                  href="https://apps.apple.com/us/app/nibble-bruin-dining/id6764253308"
                   className={styles.btnPrimary}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -233,7 +235,9 @@ export default function NibblePage() {
         <div className={styles.container}>
           <p className={styles.eyebrow}>What it does</p>
           <h2 className={styles.sectionTitle}>Three things, done well.</h2>
-          <p className={styles.sectionLede}>No dashboard. No social feed. Just menus, filtered.</p>
+          <p className={styles.sectionLede}>
+            Menus, favorites, friends, group chat, and meal planning in one app.
+          </p>
           <div className={styles.featureGrid}>
             {FEATURES.map((f) => (
               <div key={f.n} className={styles.featureCard}>
@@ -251,6 +255,7 @@ export default function NibblePage() {
         <div className={styles.container}>
           <p className={styles.eyebrow}>Screens</p>
           <h2 className={styles.sectionTitle}>A walk through the app.</h2>
+          <p className={styles.sectionLede}>Illustrations of the Nibble app experience.</p>
           <div className={styles.screenGrid}>
             {[
               { label: "01 · Today", content: <ScreenToday /> },
@@ -276,12 +281,11 @@ export default function NibblePage() {
               <h3 className={styles.caseH3}>Stack</h3>
               <p className={styles.caseCopy}>
                 React Native + Expo · TypeScript · Supabase auth &amp; data ·
-                React Query for cache · Sentry &amp; Expo OTA for ops.
+                Expo notifications and image picker.
               </p>
               <h3 className={styles.caseH3}>Highlights</h3>
               <p className={styles.caseCopy}>
-                Preference-aware filtering · resilient menu reads ·
-                privacy-aware account flows.
+                Preference-aware filtering · favorites and meal planning.
               </p>
             </div>
             <div>
@@ -295,22 +299,22 @@ export default function NibblePage() {
               <p className={styles.caseCopy}>
                 Nibble consolidates every hall&apos;s menu into one
                 mobile-first flow. Saved preferences narrow the list
-                automatically. Local-first reads keep menus visible even when
-                the network drops between buildings.
+                automatically, while favorites, groups, and meal plans help
+                students decide where and when to eat.
               </p>
               <h3 className={styles.caseH3}>Architecture</h3>
               <p className={styles.caseCopy}>
-                The client is React Native + Expo with typed API boundaries.
-                Supabase backs auth and the menu cache. A scheduled job
-                normalizes incoming menu feeds before they hit users — so
-                unfamiliar ingredient strings never break a filter.
+                The TypeScript client uses React Native and Expo. Supabase
+                backs authentication, menus, social features, and storage. A
+                scheduled ingestion job normalizes menu feeds before the
+                client reads them.
               </p>
             </div>
           </div>
 
           <div className={styles.ctaRow}>
             <a
-              href="https://apps.apple.com"
+              href="https://apps.apple.com/us/app/nibble-bruin-dining/id6764253308"
               className={styles.btnPrimary}
               target="_blank"
               rel="noopener noreferrer"

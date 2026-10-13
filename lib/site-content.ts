@@ -84,7 +84,7 @@ export const PROJECTS: ProjectItem[] = [
     slug: "nibble",
     title: "Nibble",
     summary:
-      "Bruin dining companion with dietary filtering, local-first UX, and privacy-conscious routing.",
+      "Bruin dining companion with dietary filtering, favorites, social features, and meal planning.",
     status: "live",
     category: "phone",
     tech: ["React Native", "Expo", "TypeScript", "Supabase"],
@@ -100,13 +100,13 @@ export const PROJECTS: ProjectItem[] = [
       problem:
         "Students often check multiple menu sources, parse inconsistent food information, and repeatedly apply dietary constraints, which slows daily decisions.",
       solution:
-        "Nibble consolidates menu data into a mobile-first flow with saved preferences, clear filtering, and local-first behavior for reliable browsing.",
+        "Nibble consolidates menu data into a mobile-first flow with saved preferences, clear filtering, favorites, and group meal planning.",
       architecture:
-        "Built with React Native + Expo on the client and Supabase-backed data/auth with typed boundaries for reliability and faster iteration.",
+        "Built with a TypeScript, React Native, and Expo client backed by Supabase authentication, data, and storage.",
       highlights: [
         "Preference-aware filtering for faster meal decisions.",
-        "Local-first read paths for resilient menu browsing.",
-        "Privacy-aware account/data handling with a dedicated policy route.",
+        "Favorites, friends, group chat, and shared meal plans.",
+        "Dining hall and food truck menus with configurable notifications.",
       ],
     },
   },
