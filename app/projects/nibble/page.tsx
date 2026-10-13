@@ -172,7 +172,9 @@ export default function NibblePage() {
               </Link>
               <span className={styles.nibbleMark}>
                 <span className={styles.swatch} />
-                Nibble · UCLA dining, simplified
+                <span className={styles.nibbleMarkLabel}>
+                  Nibble · UCLA dining, simplified
+                </span>
               </span>
               <h1 className={styles.heroTitle}>
                 Eat what fits
